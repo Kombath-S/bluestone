@@ -3,6 +3,9 @@ export default {
   content: ["./src/**/*.{html,tsx}"],
   theme: {
     extend: {
+      maxWidth: {
+        "pad": "1400px !important"
+      }
     },
     colors: {
       "gray": {
@@ -16,7 +19,11 @@ export default {
       "pink": "#ff00cc",
       "transparent": "transparent",
       "white": "#ffffff"
-    }
+    },
+    screens:{
+      "xs": ""
+    },
+    
   },
   plugins: [],
 }
