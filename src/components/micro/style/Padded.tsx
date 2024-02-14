@@ -7,7 +7,7 @@ export const Padded = (
     className?: string,
   }) => {
   return (
-    <div className={`w-full max-w-pad mx-auto  ${className}`} style={style}>
+    <div className={`w-full max-w-pad mx-auto px-3 ${className}`} style={style}>
         {children} 
     </div>
 )

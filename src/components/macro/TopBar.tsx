@@ -2,15 +2,15 @@ import { Padded } from "../micro/style"
 
 export const TopBar = () => {
     return (
-        <div className="flex bg-gray-400 text-white px-2 h-10">
-            <Padded className="flex justify-between items-center">
+        <div className="flex bg-gray-400 text-white m-h-10 py-2">
+            <Padded className="flex justify-between items-center tablet:flex-col tablet:items-start">
 
                 <div className="left flex gap-2">
                     <a href="#" className="cursor-pointer">India</a>
                     <a href="#" className="cursor-pointer">Europe</a>
                     <a href="#" className="cursor-pointer">USA</a>
                 </div>
-                <div className="right flex gap-6 items-center">
+                <div className="right flex gap-6 items-center  tablet:flex-col tablet:items-start">
                     <div className="flex gap-3 items-center">
                         <a href="#">
                             <span className="flex gap-0 items-center">
@@ -26,7 +26,7 @@ export const TopBar = () => {
                         </a>
 
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 tablet:hidden">
                         <a href="#">
                             <img src="/public/icons/twitter-white.png" alt="twitter" className=" h-4" />
                         </a>

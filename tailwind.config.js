@@ -20,10 +20,15 @@ export default {
       "transparent": "transparent",
       "white": "#ffffff"
     },
-    screens:{
-      "xs": ""
+    screens: {
+      "phone": { 'max': "700px", },
+      "tablet": { "max": "950px",  },
+      "screen": { "max": "1180px",},
+      "screen-xl": { "max": "1200px" },
+      "screen-xxl": "1440px",
+      "menu":{"min": "1180px"}
     },
-    
+
   },
   plugins: [],
 }
