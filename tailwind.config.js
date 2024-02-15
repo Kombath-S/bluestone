@@ -32,7 +32,9 @@ export default {
    
     screens: {
       "phone": { 'max': "700px", },
+      "tablet-min": { "min": "701px",  },
       "tablet": { "max": "950px",  },
+      "screen-min": { "min": "951px",},
       "screen": { "max": "1180px",},
       "screen-xl": { "max": "1200px" },
       "screen-xxl": "1440px",
