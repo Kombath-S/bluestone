@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: poppins;
+}
+
+.overlayer {
+  background: linear-gradient(to top, #000000c5, transparent) !important;
 }

@@ -1,6 +1,25 @@
 import { Carousel } from "../components/macro/Carousel"
 import { motion, } from 'framer-motion'
 import { Padded } from "../components/micro/style"
+import { WedoCard } from "../components/macro/WedoCard"
+
+const wedoData = [
+  {
+    text: "Exhibitions Stall Design & Fabrications",
+    image: "/public/img/wedo-1.png",
+    more: true,
+  }, {
+    text: "Booth Design & Build",
+    image: "/public/img/wedo-2.png"
+  }, {
+    text: "Digital Marketing",
+    image: "/public/img/wedo-3.png"
+  }, {
+    text: "Designing & Branding",
+    image: "/public/img/wedo-4.png"
+  },
+]
+
 
 export const Home = () => {
   return (
@@ -61,9 +80,9 @@ export const Home = () => {
         </div>
       </section>
 
-      {/*  */}
+      {/* sect1 */}
       <section >
-        <Padded className="py-10 flex gap-24 px-20 tablet:flex-col " >
+        <Padded className="py-14 my-6 flex gap-24 px-20 tablet:flex-col " >
           <div className="left flex flex-col justify-around min-w-96 gap-6">
             <h1 className="text-6xl text-blue font-bold relative tablet:mb-10">
               BlueStone
@@ -99,6 +118,22 @@ export const Home = () => {
         </Padded>
       </section>
 
+      {/* Wedo */}
+      <section>
+        <Padded className="">
+          <h1 className=" text-center">What We Do</h1>
+          <p className="text-center text-4xl font-bold">
+            Best Exhibition Stall Designers in India, Europe and Poland</p>
+
+          <div className="grid grid-cols-2 gap-6 phone:grid-cols-1 my-6">
+            {
+              wedoData.map(el =>
+                <WedoCard more={el.more} text={el.text} image={el.image} key={el.text} />
+              )
+            }
+          </div>
+        </Padded>
+      </section>
     </div>
   )
 }

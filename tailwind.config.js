@@ -20,7 +20,7 @@ export default {
         "pad": "1400px !important"
       },
       backgroundColor:{
-        "blueGradient": "linear-gradient(90deg,#ffffff,#000000)"
+        "blueGradient": "linear-gradient(to top,red,blue)"
       },
       height:{
         "hero": "calc(100vh - 120px)"
