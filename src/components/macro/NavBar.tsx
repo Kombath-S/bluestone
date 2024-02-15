@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { Padded } from "../micro/style"
+import { AnimatePresence, motion } from 'framer-motion'
 
 const links = [
-  ["Home", ""],
+  ["Home", "/#"],
   ["Company", "#"],
   ["Services", "#", [
     "x", "y"
@@ -13,8 +14,10 @@ const links = [
   ["Resource", "#"],
   ["Contact", "#"],
 ]
+
+
 export const NavBar = () => {
-  const [menu,setMenu]  = useState(false)
+  const [menu, setMenu] = useState(false)
 
   return (
     <nav className={"h-16 my-2"}>
@@ -51,32 +54,50 @@ export const NavBar = () => {
 
       </Padded>
 
-     
-     { menu &&
-      <div className="absolute  top-0 z-50 bg-gray-300 w-full h-full flex flex-col justify-center items-center gap-5 text-white">
-        
-        <span className="absolute top-8" onClick={()=>setMenu(false)}>
-          <img src="/public/icons/menu.png" alt="menu" className="w-12 cursor-pointer" />
-        </span>
+      <AnimatePresence>
+        {menu &&
+          <motion.div
+            className="absolute  top-0 z-50 bg-gray-200 w-full h-full flex flex-col justify-center items-center gap-5 text-white"
 
-        {
-          links.map(el =>
-            <a href={el[1] as string} key={el[0] as string}
-              className={"flex items-center gap-2 text-lg font-semibold hover:text-blue active:text-blue active:font-bold"}>
-              {el[0]}
+            initial={{
+              opacity: 0,
+              x: '-100vw'
+            }}
+            animate={{
+              opacity: 1,
+              x: 0
+            }}
+            exit={{
+              x: '-100vw'
+            }}
+            transition={{
+              ease: "easeIn"
+            }}
+          >
+
+            <div className="flex flex-col gap-3">
+
+              <div className="logo absolute mt-3 top-3 left-2">
+              <a href="">
+                <img src="/public/img/logo.png" alt="logo" className="w-72" />
+              </a>
+            </div>
+              <span className="absolute mt-3 top-3 right-2" onClick={() => setMenu(false)}>
+                <img src="/public/icons/close.png" alt="menu" className="w-12 cursor-pointer" />
+              </span>
 
               {
-                el[2] &&
-                <span>
-                  <img src="/public/icons/carret.png" alt="carret-down" className="w-4" />
-                </span>
+                links.map(el =>
+                  <a href={el[1] as string} key={el[0] as string}
+                    className={"flex items-center gap-2 text-lg font-semibold hover:text-blue active:text-blue active:font-bold"}>
+                    {el[0]}
+                  </a>
+                )
               }
+            </div>
+          </motion.div>}
 
-
-            </a>
-          )
-        }
-      </div>}
+      </AnimatePresence>
     </nav>
   )
 }
