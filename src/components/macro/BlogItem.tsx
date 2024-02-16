@@ -19,7 +19,7 @@ export const BlogItem = ({ data }: { data: IBlogItem }) => {
             <div className="">
                 <img src={image} alt={image} className="" />
             </div>
-            <div className="mt-6  flex-1 flex flex-col justify-between">
+            <div className="mt-6  flex-1 flex flex-col justify-between px-4">
                 <div className="flex gap-8 mb-3">
                     <span className="flex flex-col">
                         <span className="font-semibold text-3xl text-blue-2 -mb-1">{day}</span>

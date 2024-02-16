@@ -5,6 +5,7 @@ import { WedoCard } from "../components/macro/WedoCard"
 import { WorkCard } from "../components/macro"
 import { IStaff, StaffCarousel } from "../components/macro/StaffCarousel"
 import { BlogItem, IBlogItem } from "../components/macro/BlogItem"
+import { TextInput } from "../components/micro/TextInput"
 
 const wedoData = [
   {
@@ -294,6 +295,38 @@ export const Home = () => {
         </Padded>
       </section>
 
+      {/* form*/}
+      <section>
+        <Padded className="mt-6 flex tablet:flex-col gap-12">
+          <div className="left">
+            <h2 className="mb-4 text-6xl font-bold max-w-[26rem] tablet:text-center tablet:max-w-full tablet:mb-6">
+              Do you have
+              a project?
+              Lets Talk.
+            </h2>
+            <p className="tablet:text-center max-w-[22rem] tablet:max-w-full mb-5">Please fill in the details and we will be in
+              touch shortly or send us email or Call us</p>
+            <p className="text-blue tablet:text-center">sales@bluestoneworldwide.com</p>
+            <p className="text-blue tablet:text-center">99251 77600</p>
+          </div>
+          <div className="right flex-1">
+            <h4 className="tablet:text-center font-semibold text-xl mb-4">Complete the form below...</h4>
+
+            <div className="grid grid-cols-2 gap-4 phone:flex phone:flex-col phone:gap-8">
+              <TextInput name="fullName" label="Full Name" />
+              <TextInput name="fullName" label="Your Company Name" />
+              <TextInput name="fullName" label="Business email" type="email" />
+              <TextInput name="fullName" label="Phone Number" type="tel" />
+              <TextInput name="fullName" label="Select your Country" type="select" />
+              <TextInput name="fullName" label="What service are you  interested in?" type="email" />
+
+              <TextInput name="fullName" label="Tell us about your Projects" type="textarea"  className="col-span-2"/>
+
+              <span className="bg-blue text-center text-white py-3 col-span-2 cursor-pointer hover:bg-blue-2">Send a request</span>
+            </div>
+          </div>
+        </Padded>
+      </section>
     </div>
   )
 }
