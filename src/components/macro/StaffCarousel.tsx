@@ -46,7 +46,7 @@ export const StaffCarousel = ({ data }: { data: IStaff[] }) => {
                 </div>
                 <img src="/public/icons/arrow.png"
                     alt="arrow"
-                    className={`h-4 cursor-pointer ${current == data.length - 1 && "opacity-50"}`}
+                    className={`h-4 cursor-pointer ${current == data.length - 1 && "opacity-50"} phone:translate-x-10`}
                     onClick={() => setCurrent((e) => e + 1 > data.length - 1 ? e : e + 1)}
                 />
             </div>

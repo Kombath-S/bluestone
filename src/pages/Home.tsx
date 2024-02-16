@@ -6,6 +6,7 @@ import { WorkCard } from "../components/macro"
 import { IStaff, StaffCarousel } from "../components/macro/StaffCarousel"
 import { BlogItem, IBlogItem } from "../components/macro/BlogItem"
 import { TextInput } from "../components/micro/TextInput"
+import { ILocationItem, LocationItem } from "../components/macro/LocationItem"
 
 const wedoData = [
   {
@@ -98,9 +99,75 @@ const blogData: IBlogItem[] = [
 
 ]
 
+const locationData: ILocationItem[] = [
+  {
+    country: "INDIA",
+    street: "403, Satya Two, Near Ranna Park Bustop, Naranpura, Ahmedabad - 380013, Gujarat(India) ",
+    number: "+91 98253 53267",
+    email: "info@bluestoneworldwide.com"
+  },
+  {
+    country: "POLAND",
+    street: "Telimeny 15, Marki, Post Code 05-270, Warsaw, Poland(Europe) ",
+    number: "+48 732 022 871",
+    email: "europe@bluestoneworldwide.com"
+  },
+
+]
+
+const footerLinks = [
+  {
+    name: "Exhibition",
+    data: [
+      ["Exhibition Design", "#"],
+      ["Virtual Events", "#"],
+      ["Merchandise", "#"],
+      ["Event Marketing", "#"],
+      ["Exhibition Stand Builders", "#"],
+      ["Hybrid Events", "#"],
+      ["Event Logistics", "#"],
+    ]
+  },
+  {
+    name: "Digital",
+    data: [
+      ["Web Design", "#"],
+      ["Animation", "#"],
+      ["WordPress Development", "#"],
+      ["Email Marketing", "#"],
+      ["SEO", "#"],
+      ["Social Marketing", "#"],
+      ["App Design & Development", "#"],
+    ]
+  },
+  {
+    name: "Branding",
+    data: [
+      ["Brand Startegy & Development", "#"],
+      ["Rebranding", "#"],
+      ["Logo Design", "#"],
+      ["Packaging Desing", "#"],
+      ["Infographics", "#"],
+      ["Presentations", "#"],
+    ]
+  },
+  {
+    name: "Print",
+    data: [
+      ["Direct Mail", "#"],
+      ["Digital Pinting", "#"],
+      ["Large Format", "#"],
+      ["Large Format", "#"],
+      ["Personalised Mailing", "#"],
+      ["Exhibition & Event Planning", "#"],
+    ]
+  },
+
+]
+
 export const Home = () => {
   return (
-    <div className="" style={{ minHeight: "600vh" }}>
+    <div className="">
       {/* HERO */}
       <section
         className="flex screen-min:h-hero  tablet:flex-col"
@@ -320,13 +387,73 @@ export const Home = () => {
               <TextInput name="fullName" label="Select your Country" type="select" />
               <TextInput name="fullName" label="What service are you  interested in?" type="email" />
 
-              <TextInput name="fullName" label="Tell us about your Projects" type="textarea"  className="col-span-2"/>
+              <TextInput name="fullName" label="Tell us about your Projects" type="textarea" className="col-span-2" />
 
               <span className="bg-blue text-center text-white py-3 col-span-2 cursor-pointer hover:bg-blue-2">Send a request</span>
             </div>
           </div>
         </Padded>
       </section>
+
+      {/* Footer*/}
+      <section>
+        <Padded className="flex flex-col bg-black min-h-96 text-gray-300 mt-10 px-24 py-8 phone:px-8">
+
+          <div className="flex gap-38 justify-between tablet:flex-col tablet:gap-6 border-b border-gray-200 pb-4">
+            <div className="one text-gray-200 font-bold max-w-[26rem]">
+              <h3 className="text-6xl relative tablet:text-center w-fit">
+                BlueStone
+                <span className="w-full h-[1px] bg-gray-200 absolute -bottom-2 left-0"></span>
+                <span className=" absolute text-gray-200 text-sm w-max -bottom-4 left-[50%] bg-black -translate-x-[50%] px-2">
+                  Empower Your Brand</span>
+              </h3>
+
+              {
+                locationData.map(el =>
+                  <LocationItem data={el} key={el.country} />)
+              }
+            </div>
+            <div className="two grid grid-cols-2  gap-4">
+              {
+                footerLinks.map(el =>
+                  <>
+                    <div className="" key={el.name}>
+                      <p className="bold text-white mb-4">{el.name}</p>
+                      {
+                        el.data.map(el =>
+                          <p className="text-wrap text-sm mb-2">
+                            <a href={el[1]} key={el[0]}>{el[0]}</a>
+                          </p>
+                        )
+                      }
+                    </div>
+                  </>
+                )
+              }
+
+            </div>
+
+          </div>
+          <div className="copy mt-8">
+            <p className="">Copyright © 2022 Bluestone Exhibition and Event Pvt. Ltd.. All rights reserved</p>
+            <p className="flex gap-3 items-center justify-between phone:flex-col">
+              <p className="flex gap-4 my-2">
+                <span className="cursor-pointer">Terms of Use</span>
+                <span className="cursor-pointer">Privacy Policy</span>
+                <span className="cursor-pointer">Copyright Policy</span>
+              </p>
+              <p className="flex gap-2">
+                <img className="w-4 h-5" src="/public/icons/facebook-dark.png" alt="facebook" />
+                <img className="w-5 h-5" src="/public/icons/twitter-dark.png" alt="twitter" />
+                <img className="w-5 h-5" src="/public/icons/insta-dark.png" alt="instagram" />
+                <img className="w-5 h-5" src="/public/icons/linkedin.png" alt="linkedin" />
+                <img className="w-5 h-5" src="/public/icons/youtube-dark.png" alt="youtube" />
+              </p>
+            </p>
+          </div>
+        </Padded>
+      </section>
+
     </div>
   )
 }
