@@ -12,6 +12,7 @@ export default {
         },
         "red": "#ff3d55",
         "blue": "#0856a2",
+        "blue-2": "#3D348D",
         "pink": "#ff00cc",
         "transparent": "transparent",
         "white": "#ffffff"

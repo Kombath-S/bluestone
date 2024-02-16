@@ -17,14 +17,14 @@ export const WorkCard = ({ image, day, month, place, partner, type }: IWork) => 
 
 
     return (
-        <motion.div className="flex-1 cursor-pointer bg-blue relative phone:h-72"
+        <motion.div className="flex-1 h-72 cursor-pointer  relative phone:h-72"
             animate={{ flex: hov ? 2 : 1 }}
             onHoverStart={() => { setHov(true) }}
             onHoverEnd={() => { setHov(false) }}>
             <div className="">
 
             </div>
-            <img src={image} alt={image} className="max-h-full w-full h-full" />
+            <img src={image} alt={image} className="h-full w-full max-h-72" />
             <div className="bg-red text-white absolute top-3 left-4 flex-col flex text-center px-3 py-1">
                 <span className="text-2xl font-bold">{day}</span>
                 <span className="">{month}</span>

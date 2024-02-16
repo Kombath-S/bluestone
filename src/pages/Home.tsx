@@ -3,6 +3,7 @@ import { motion, } from 'framer-motion'
 import { Padded } from "../components/micro/style"
 import { WedoCard } from "../components/macro/WedoCard"
 import { WorkCard } from "../components/macro"
+import { IStaff, StaffCarousel } from "../components/macro/StaffCarousel"
 
 const wedoData = [
   {
@@ -42,6 +43,30 @@ const Workdata = [
     month: "mar",
     partner: "",
     place: "",
+  },
+
+]
+
+const staffData: IStaff[] = [
+  {
+    name: "John Doe",
+    title: "Founder",
+    image: "/public/img/avatar-2.png"
+  },
+  {
+    name: "David Warner",
+    title: "Founder",
+    image: "/public/img/avatar-1.png"
+  },
+  {
+    name: "Jane Doe",
+    title: "Founder",
+    image: "/public/img/avatar-3.png"
+  },
+  {
+    name: "John wick",
+    title: "Founder",
+    image: "/public/img/avatar-4.png"
   },
 
 ]
@@ -167,7 +192,7 @@ export const Home = () => {
           <p className="text-center mb-4 ">
             Best Exhibition Stall Designers in India, Europe and Poland</p>
 
-          <div className="flex h-72 gap-6 phone:flex-col">
+          <div className="flex min-h-72 gap-6 phone:flex-col">
             {
               Workdata.map(el =>
                 <WorkCard
@@ -185,6 +210,48 @@ export const Home = () => {
           </div>
         </Padded>
       </section>
+
+      {/* Sponsors*/}
+      <section>
+        <Padded className="bg-blue-2 flex gap-24 tablet:flex-col px-24 my-12 py-12 screen:px-8">
+
+          <div className="left flex py-10 gap-3 flex-1  text-white items-center">
+            <div className="self-start">
+              <img src="/public/icons/quote.png" alt="" className="w-24" />
+            </div>
+            <div className="">
+              <p className="text-2xl font-bold mb-3">
+                You are amazing! You worked so hard for Cady's wedding.
+              </p>
+
+              <p className="text-sm mb-6">
+                You are amazing! You worked so hard for Cady's wedding. You had every little detail under control you need to run my life!
+              </p>
+              <StaffCarousel data={staffData} />
+            </div>
+
+          </div>
+
+          <div className="right flex-1 flex flex-col gap-14">
+            <div className="flex justify-between">
+              <img src="/public/img/partner-gocil.png" alt="gocil" className="w-32" />
+              <img src="/public/img/partner-Hasco-Lek_1.png" alt="hasco" className="w-32" />
+              <img src="/public/img/partner-Ambah.png" alt="ambah" className="w-32" />
+            </div>
+            <div className="flex justify-between">
+              <img src="/public/img/partner-blauberg.png" alt="blauberg" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/public/img/partner-Satellite.png" alt="gocil" className="w-60 tablet-min:w-52 phone:w-48" />
+
+            </div>
+            <div className="flex justify-between">
+              <img src="/public/img/partner-Hoymiles.png" alt="hoymiles" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/public/img/partner-mehler-texnologies.png" alt="mehler" className="w-60 tablet-min:w-52 phone:w-48" />
+
+            </div>
+          </div>
+        </Padded>
+      </section>
+
     </div>
   )
 }
