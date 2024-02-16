@@ -34,7 +34,7 @@ export const StaffCarousel = ({ data }: { data: IStaff[] }) => {
 
             </AnimatePresence>
             <div className="mt-6 flex items-center gap-4 -translate-x-12 tablet-min:justify-center">
-                <img src="/public/icons/arrow.png" alt="arrow"
+                <img src="/icons/arrow.png" alt="arrow"
                     className={`-scale-x-100 h-4 cursor-pointer ${current == 0 && "opacity-50"}`}
                     onClick={() => setCurrent(e => e == 0 ? 0 : e - 1)}
                 />
@@ -44,7 +44,7 @@ export const StaffCarousel = ({ data }: { data: IStaff[] }) => {
                         <img src={el.image} key={el.image} alt={el.image} className="w-20" />
                     )}
                 </div>
-                <img src="/public/icons/arrow.png"
+                <img src="/icons/arrow.png"
                     alt="arrow"
                     className={`h-4 cursor-pointer ${current == data.length - 1 && "opacity-50"} phone:translate-x-10`}
                     onClick={() => setCurrent((e) => e + 1 > data.length - 1 ? e : e + 1)}

@@ -8,10 +8,10 @@ interface ICarousel {
 }
 
 const imgs = [
-    "/public/img/hero.png",
-    "/public/img/blog-1.png",
-    "/public/img/blog-2.png",
-    "/public/img/blog-3.png",
+    "/img/hero.png",
+    "/img/blog-1.png",
+    "/img/blog-2.png",
+    "/img/blog-3.png",
 ]
 
 export const Carousel = ({

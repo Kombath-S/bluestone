@@ -13,7 +13,7 @@ export const LocationItem = ({ data }: { data: ILocationItem }) => {
             <h4 className="text-white mb-4">{data.country}</h4>
             <p className="flex gap-3 mb-3">
                 <span className="">
-                    <img src="/public/icons/location-dark.png" alt="location" className="w-5" />
+                    <img src="/icons/location-dark.png" alt="location" className="w-5" />
                 </span>
                 <span className="">
                     {data.street}
@@ -21,7 +21,7 @@ export const LocationItem = ({ data }: { data: ILocationItem }) => {
             </p>
             <p className="flex gap-3 mb-3">
                 <span className="">
-                    <img src="/public/icons/call-dark.png" alt="call" className="w-5" />
+                    <img src="/icons/call-dark.png" alt="call" className="w-5" />
                 </span>
                 <span className="">
                     {data.number}
@@ -29,7 +29,7 @@ export const LocationItem = ({ data }: { data: ILocationItem }) => {
             </p>
             <p className="flex gap-3 mb-3">
                 <span className="">
-                    <img src="/public/icons/env-dark.png" alt="envelope" className="w-5" />
+                    <img src="/icons/env-dark.png" alt="envelope" className="w-5" />
                 </span>
                 <span className="">
                     {data.email}

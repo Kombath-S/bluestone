@@ -24,7 +24,7 @@ export const NavBar = () => {
       <Padded className="flex items-center justify-between">
         <div className="logo">
           <a href="">
-            <img src="/public/img/logo.png" alt="logo" className="w-72" />
+            <img src="/img/logo.png" alt="logo" className="w-72" />
           </a>
         </div>
         <div className="navs flex gap-5 screen:hidden">
@@ -37,7 +37,7 @@ export const NavBar = () => {
                 {
                   el[2] &&
                   <span onClick={() => setMenu(true)}>
-                    <img src="/public/icons/carret.png" alt="carret-down" className="w-4" />
+                    <img src="/icons/carret.png" alt="carret-down" className="w-4" />
                   </span>
                 }
 
@@ -49,7 +49,7 @@ export const NavBar = () => {
         </div>
 
         <span className="menu:hidden" onClick={() => setMenu(true)} >
-          <img src="/public/icons/menu.png" alt="menu" className="w-12 cursor-pointer" />
+          <img src="/icons/menu.png" alt="menu" className="w-12 cursor-pointer" />
         </span>
 
       </Padded>
@@ -79,11 +79,11 @@ export const NavBar = () => {
 
               <div className="logo absolute mt-3 top-3 left-2">
               <a href="">
-                <img src="/public/img/logo.png" alt="logo" className="w-72" />
+                <img src="/img/logo.png" alt="logo" className="w-72" />
               </a>
             </div>
               <span className="absolute mt-3 top-3 right-2" onClick={() => setMenu(false)}>
-                <img src="/public/icons/close.png" alt="menu" className="w-12 cursor-pointer" />
+                <img src="/icons/close.png" alt="menu" className="w-12 cursor-pointer" />
               </span>
 
               {

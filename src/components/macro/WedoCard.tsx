@@ -17,7 +17,7 @@ export const WedoCard = ({ image, text, more }: Ido) => {
                     more &&
                     <span className="mt-4 flex items-center gap-2">
                         Know More
-                        <img src="/public/icons/arrow.png" alt="arrow" className="w-4 h-3" />
+                        <img src="/icons/arrow.png" alt="arrow" className="w-4 h-3" />
                     </span>
                 }
 

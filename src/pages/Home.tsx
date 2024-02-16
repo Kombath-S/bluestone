@@ -11,37 +11,37 @@ import { ILocationItem, LocationItem } from "../components/macro/LocationItem"
 const wedoData = [
   {
     text: "Exhibitions Stall Design & Fabrications",
-    image: "/public/img/wedo-1.png",
+    image: "/img/wedo-1.png",
     more: true,
   }, {
     text: "Booth Design & Build",
-    image: "/public/img/wedo-2.png"
+    image: "/img/wedo-2.png"
   }, {
     text: "Digital Marketing",
-    image: "/public/img/wedo-3.png"
+    image: "/img/wedo-3.png"
   }, {
     text: "Designing & Branding",
-    image: "/public/img/wedo-4.png"
+    image: "/img/wedo-4.png"
   },
 ]
 
 const Workdata = [
   {
-    image: "/public/img/ourWork-1.png",
+    image: "/img/ourWork-1.png",
     day: 12,
     month: "Mar",
     partner: "",
     place: "",
   },
   {
-    image: "/public/img/ourWork-2.png",
+    image: "/img/ourWork-2.png",
     day: 12,
     month: "Nar",
     partner: "Krystal Global Engineering Ltd.",
     place: "Dusseldarf, Germany"
   },
   {
-    image: "/public/img/ourWork-3.png",
+    image: "/img/ourWork-3.png",
     day: 12,
     month: "mar",
     partner: "",
@@ -54,22 +54,22 @@ const staffData: IStaff[] = [
   {
     name: "John Doe",
     title: "Founder",
-    image: "/public/img/avatar-2.png"
+    image: "/img/avatar-2.png"
   },
   {
     name: "David Warner",
     title: "Founder",
-    image: "/public/img/avatar-1.png"
+    image: "/img/avatar-1.png"
   },
   {
     name: "Jane Doe",
     title: "Founder",
-    image: "/public/img/avatar-3.png"
+    image: "/img/avatar-3.png"
   },
   {
     name: "John wick",
     title: "Founder",
-    image: "/public/img/avatar-4.png"
+    image: "/img/avatar-4.png"
   },
 
 ]
@@ -80,21 +80,21 @@ const blogData: IBlogItem[] = [
     month: "Mar",
     title: "Questions To Ask Yourself Before Renting Or Buying",
     text: "Trade shows made its place long back while creating a platform to generate business and build professional networks at an international level. Now exhibiting in trade shows is the key..",
-    image: "/public/img/blog-1.png",
+    image: "/img/blog-1.png",
   },
   {
     day: 20,
     month: "Mar",
     title: "Salon VS Foire, quelle est la différence?",
     "text": "La foire se caractérise comme une manifestation commerciale regroupant des exposants de secteurs d’activité très diversifiés.",
-    image: "/public/img/blog-2.png",
+    image: "/img/blog-2.png",
   },
   {
     day: 21,
     month: "Mar",
     title: "B2B Marketing Trends to ensure a successful exhi...",
     text: "The B2B marketing landscape is radically changing. With so many tools on the market that achieve results faster and more efficiently,",
-    image: "/public/img/blog-3.png",
+    image: "/img/blog-3.png",
   },
 
 ]
@@ -167,7 +167,9 @@ const footerLinks = [
 
 export const Home = () => {
   return (
-    <div className="">
+
+    <div className="relative">
+      
       {/* HERO */}
       <section
         className="flex screen-min:h-hero  tablet:flex-col"
@@ -253,7 +255,7 @@ export const Home = () => {
               >
                 Read More
                 <span className="">
-                  <img src="/public/icons/arrow-blue.png" alt="arrow" />
+                  <img src="/icons/arrow-blue.png" alt="arrow" />
                 </span>
               </a>
             </p>
@@ -311,7 +313,7 @@ export const Home = () => {
 
           <div className="left flex py-10 gap-3 flex-1  text-white items-center">
             <div className="self-start">
-              <img src="/public/icons/quote.png" alt="" className="w-24" />
+              <img src="/icons/quote.png" alt="" className="w-24" />
             </div>
             <div className="">
               <p className="text-2xl font-bold mb-3">
@@ -328,18 +330,18 @@ export const Home = () => {
 
           <div className="right flex-1 flex flex-col gap-14">
             <div className="flex justify-between">
-              <img src="/public/img/partner-gocil.png" alt="gocil" className="w-32" />
-              <img src="/public/img/partner-Hasco-Lek_1.png" alt="hasco" className="w-32" />
-              <img src="/public/img/partner-Ambah.png" alt="ambah" className="w-32" />
+              <img src="/img/partner-gocil.png" alt="gocil" className="w-32" />
+              <img src="/img/partner-Hasco-Lek_1.png" alt="hasco" className="w-32" />
+              <img src="/img/partner-Ambah.png" alt="ambah" className="w-32" />
             </div>
             <div className="flex justify-between">
-              <img src="/public/img/partner-blauberg.png" alt="blauberg" className="w-60 tablet-min:w-52 phone:w-48" />
-              <img src="/public/img/partner-Satellite.png" alt="gocil" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/img/partner-blauberg.png" alt="blauberg" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/img/partner-Satellite.png" alt="gocil" className="w-60 tablet-min:w-52 phone:w-48" />
 
             </div>
             <div className="flex justify-between">
-              <img src="/public/img/partner-Hoymiles.png" alt="hoymiles" className="w-60 tablet-min:w-52 phone:w-48" />
-              <img src="/public/img/partner-mehler-texnologies.png" alt="mehler" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/img/partner-Hoymiles.png" alt="hoymiles" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/img/partner-mehler-texnologies.png" alt="mehler" className="w-60 tablet-min:w-52 phone:w-48" />
 
             </div>
           </div>
@@ -443,11 +445,11 @@ export const Home = () => {
                 <span className="cursor-pointer">Copyright Policy</span>
               </p>
               <p className="flex gap-2">
-                <img className="w-4 h-5" src="/public/icons/facebook-dark.png" alt="facebook" />
-                <img className="w-5 h-5" src="/public/icons/twitter-dark.png" alt="twitter" />
-                <img className="w-5 h-5" src="/public/icons/insta-dark.png" alt="instagram" />
-                <img className="w-5 h-5" src="/public/icons/linkedin.png" alt="linkedin" />
-                <img className="w-5 h-5" src="/public/icons/youtube-dark.png" alt="youtube" />
+                <img className="w-4 h-5" src="/icons/facebook-dark.png" alt="facebook" />
+                <img className="w-5 h-5" src="/icons/twitter-dark.png" alt="twitter" />
+                <img className="w-5 h-5" src="/icons/insta-dark.png" alt="instagram" />
+                <img className="w-5 h-5" src="/icons/linkedin.png" alt="linkedin" />
+                <img className="w-5 h-5" src="/icons/youtube-dark.png" alt="youtube" />
               </p>
             </p>
           </div>

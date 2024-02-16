@@ -14,13 +14,13 @@ export const TopBar = () => {
                     <div className="flex gap-3 items-center">
                         <a href="#">
                             <span className="flex gap-0 items-center">
-                                <img src="/public/icons/call-white.png" alt="phone" className="w-4 h-3" />
+                                <img src="/icons/call-white.png" alt="phone" className="w-4 h-3" />
                                 <span className="text-sm">+91 45102 45421 14215 11440</span>
                             </span>
                         </a>
                         <a href="#">
                             <span className="flex gap-1 items-center">
-                                <img src="/public/icons/env-white.png" alt="email" className="w-4 h-3" />
+                                <img src="/icons/env-white.png" alt="email" className="w-4 h-3" />
                                 <span className="text-sm">info@bluestoneworldwide.com</span>
                             </span>
                         </a>
@@ -28,13 +28,13 @@ export const TopBar = () => {
                     </div>
                     <div className="flex gap-3 tablet:hidden">
                         <a href="#">
-                            <img src="/public/icons/twitter-white.png" alt="twitter" className=" h-4" />
+                            <img src="/icons/twitter-white.png" alt="twitter" className=" h-4" />
                         </a>
                         <a href="#">
-                            <img src="/public/icons/facebook-white.png" alt="facebook" className="w-2 " />
+                            <img src="/icons/facebook-white.png" alt="facebook" className="w-2 " />
                         </a>
                         <a href="#">
-                            <img src="/public/icons/youtube-white.png" alt="youtube" className=" h-4" />
+                            <img src="/icons/youtube-white.png" alt="youtube" className=" h-4" />
                         </a>
 
                     </div>
