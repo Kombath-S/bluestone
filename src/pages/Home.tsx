@@ -330,18 +330,18 @@ export const Home = () => {
 
           <div className="right flex-1 flex flex-col gap-14">
             <div className="flex justify-between">
-              <img src="/img/partner-gocil.png" alt="gocil" className="w-32" />
-              <img src="/img/partner-Hasco-Lek_1.png" alt="hasco" className="w-32" />
-              <img src="/img/partner-Ambah.png" alt="ambah" className="w-32" />
+              <img src="/img/partner-gocil.png" alt="gocil" className="w-32 phone:w-24" />
+              <img src="/img/partner-Hasco-Lek_1.png" alt="hasco" className="w-32 phone:w-24" />
+              <img src="/img/partner-Ambah.png" alt="ambah" className="w-32 phone:w-24" />
             </div>
             <div className="flex justify-between">
-              <img src="/img/partner-blauberg.png" alt="blauberg" className="w-60 tablet-min:w-52 phone:w-48" />
-              <img src="/img/partner-Satellite.png" alt="gocil" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/img/partner-blauberg.png" alt="blauberg" className="w-60 tablet-min:w-52 phone:w-32" />
+              <img src="/img/partner-Satellite.png" alt="gocil" className="w-60 tablet-min:w-52 phone:w-32" />
 
             </div>
             <div className="flex justify-between">
-              <img src="/img/partner-Hoymiles.png" alt="hoymiles" className="w-60 tablet-min:w-52 phone:w-48" />
-              <img src="/img/partner-mehler-texnologies.png" alt="mehler" className="w-60 tablet-min:w-52 phone:w-48" />
+              <img src="/img/partner-Hoymiles.png" alt="hoymiles" className="w-60 tablet-min:w-52 phone:w-32" />
+              <img src="/img/partner-mehler-texnologies.png" alt="mehler" className="w-60 tablet-min:w-52 phone:w-32" />
 
             </div>
           </div>
