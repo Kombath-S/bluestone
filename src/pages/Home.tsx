@@ -4,6 +4,7 @@ import { Padded } from "../components/micro/style"
 import { WedoCard } from "../components/macro/WedoCard"
 import { WorkCard } from "../components/macro"
 import { IStaff, StaffCarousel } from "../components/macro/StaffCarousel"
+import { BlogItem, IBlogItem } from "../components/macro/BlogItem"
 
 const wedoData = [
   {
@@ -67,6 +68,31 @@ const staffData: IStaff[] = [
     name: "John wick",
     title: "Founder",
     image: "/public/img/avatar-4.png"
+  },
+
+]
+
+const blogData: IBlogItem[] = [
+  {
+    day: 19,
+    month: "Mar",
+    title: "Questions To Ask Yourself Before Renting Or Buying",
+    text: "Trade shows made its place long back while creating a platform to generate business and build professional networks at an international level. Now exhibiting in trade shows is the key..",
+    image: "/public/img/blog-1.png",
+  },
+  {
+    day: 20,
+    month: "Mar",
+    title: "Salon VS Foire, quelle est la différence?",
+    "text": "La foire se caractérise comme une manifestation commerciale regroupant des exposants de secteurs d’activité très diversifiés.",
+    image: "/public/img/blog-2.png",
+  },
+  {
+    day: 21,
+    month: "Mar",
+    title: "B2B Marketing Trends to ensure a successful exhi...",
+    text: "The B2B marketing landscape is radically changing. With so many tools on the market that achieve results faster and more efficiently,",
+    image: "/public/img/blog-3.png",
   },
 
 ]
@@ -248,6 +274,22 @@ export const Home = () => {
               <img src="/public/img/partner-mehler-texnologies.png" alt="mehler" className="w-60 tablet-min:w-52 phone:w-48" />
 
             </div>
+          </div>
+        </Padded>
+      </section>
+
+      {/* blog*/}
+      <section>
+        <Padded className="">
+          <h1 className=" text-center text-4xl font-bold">Latest Blogs</h1>
+          <p className="text-center ">
+            Our Latest Blogs/News</p>
+
+          <div className="flex phone:flex-col mt-6 justify-between gap-8 phone:items-center">
+            {
+              blogData.map(el =>
+                <BlogItem data={el} key={el.title} />)
+            }
           </div>
         </Padded>
       </section>
