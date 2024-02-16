@@ -41,7 +41,7 @@ export const StaffCarousel = ({ data }: { data: IStaff[] }) => {
 
                 <div className="flex gap-2 ">
                     {data.map(el =>
-                        <img src={el.image} key={el.image} alt={el.image} className="w-20" />
+                        <img src={el.image} key={el.image} alt={el.image} className="w-20 phone:w-14" />
                     )}
                 </div>
                 <img src="/icons/arrow.png"
